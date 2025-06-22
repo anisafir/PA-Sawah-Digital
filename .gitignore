@@ -1,37 +1,75 @@
-# node_modules: tempat semua dependency
-node_modules/
-
-# .env: file environment variables (berisi data sensitif seperti API key)
-.env
-
-# log files
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS-specific files
+# OSX
+#
 .DS_Store
-Thumbs.db
 
-# Editor/IDE-specific
-.vscode/
-.idea/
-
-# build output (jika ada build step)
-dist/
+# Xcode
+#
 build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+**/.xcode.env.local
 
-# coverage tools (misalnya dari testing)
-coverage/
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
 
-# PM2 process logs (jika pakai PM2)
-pids
-*.pid
-*.seed
-*.pid.lock
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+server/src/*
 
-# optional: ignore test reports
-test-output/
-.vercel
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Bundle artifact
+*.jsbundle
+
+# Ruby / CocoaPods
+**/Pods/
+/vendor/bundle/
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
+# testing
+/coverage
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
