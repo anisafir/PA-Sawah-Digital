@@ -83,7 +83,6 @@ const App = () => {
     initBluetooth();
     requestPermissions();
 
-    
   }, []);
 
   const fetchPairedDevices = async () => {
@@ -107,7 +106,7 @@ const App = () => {
       const connected = await RNBluetoothClassic.getConnectedDevices();
       connected.forEach(device => {
         console.log('Device info:', JSON.stringify(device, null, 2));
-    });
+      });
       setConnectedDevices(connected);
     } catch (err) {
       console.error('Error fetching connected devices:', err);
@@ -164,7 +163,6 @@ const App = () => {
     } catch (error) {
       console.error('Error during device scanning:', error);
     } finally {
-      // Stop discovery after a timeout (e.g., 10 seconds)
       setTimeout(async () => {
         console.log('Stopping device scan...');
         await RNBluetoothClassic.cancelDiscovery();
@@ -186,7 +184,6 @@ const App = () => {
       console.error("Error reading data:", error);
     }
   };
-  
 
   const parseNMEAData = (data) => {
     const gpgga = data.split('\n').find(line => line.startsWith('$GPGGA'));
